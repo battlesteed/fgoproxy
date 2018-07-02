@@ -1,7 +1,7 @@
 package steed.fgoproxy;
 
 public class FGOUtil {
-	public static void out(String prefix,String str){
+	public static void out(String prefix,Object str){
 		System.out.println(prefix+"----->"+str);
 	}
 }

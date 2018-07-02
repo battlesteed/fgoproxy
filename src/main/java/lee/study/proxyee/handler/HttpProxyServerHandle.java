@@ -153,7 +153,7 @@ public class HttpProxyServerHandle extends ChannelInboundHandlerAdapter {
        */
       RequestProto requestProto = new RequestProto(host, port, isSsl);
       ChannelInitializer channelInitializer =
-          isHttp ? new HttpProxyInitializer(channel, requestProto, proxyHandler)
+          isHttp ? new HttpProxyInitializer(channel, requestProto, proxyHandler,null)
               : new TunnelProxyInitializer(channel, proxyHandler);
       Bootstrap bootstrap = new Bootstrap();
       bootstrap.group(serverConfig.getLoopGroup()) // 注册线程池
